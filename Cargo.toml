@@ -1,0 +1,10 @@
+[package]
+name = "milli_index"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+milli = { git = "https://github.com/meilisearch/milli", rev = "77de82aaa4ceaee9a5c4ec69c722bc709465f932" }
+heed = { git = "https://github.com/Kerollmops/heed", tag = "v0.12.1" }
