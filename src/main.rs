@@ -5,6 +5,9 @@ use heed::EnvOpenOptions;
 use milli::update::{IndexDocumentsMethod, UpdateBuilder, UpdateFormat};
 use milli::{Error, Index};
 
+#[global_allocator]
+static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 fn main() {
     let data = stdin();
     let db_name = "bug.mmdb";

@@ -6,5 +6,10 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-milli = { git = "https://github.com/meilisearch/milli", rev = "77de82aaa4ceaee9a5c4ec69c722bc709465f932" }
+milli = { git = "https://github.com/meilisearch/milli", rev = "ee3a49cfba760ed2e89eb56887205c62f4217ebe" }
+# milli = { path = "../milli/milli" }
 heed = { git = "https://github.com/Kerollmops/heed", tag = "v0.12.1" }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+jemallocator = "0.3.2"
+
